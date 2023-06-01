@@ -177,6 +177,27 @@ model (a variation of RFM).
 
 Jupyter notebook attached
 
+# Conclusion
+The aim of this Blood Donation Application is to improve the communication 
+with the people who are in need of blood and the persons who are willing to 
+donate blood. This will reduce the barrier between blood donors and the people 
+in sever need of blood.
+So our research’s objective is to build a community of blood donor and to make 
+sure that we can come forward to donate blood as it can make sure the return of 
+a dying man again into the light of life.
+Donating blood and blood components are easier than ever. Connecting blood 
+donors and needy reduces time which increases the possibility of saving lives 
+and also eliminates the shortage of blood. It is one of its first and only unique 
+applications available with feature of realtime map and machine learning 
+algorithm for finding the best suitable donor. It uses the internet connection to 
+let us search blood donors and recipient. This enables to find the best matches 
+among the donors available with the help of machine learning algorithms. The 
+algorithms are capable of analyzing the profile of each donor and find the best 
+fit ones with respect to health condition and lifestyle. Moreover, It is also 
+capable of showing the exact number of the donors in the map who are willing 
+to donate blood. This will make the easiest and fastest way to get a best match 
+blood donor
+
 
 
 
