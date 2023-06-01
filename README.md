@@ -106,6 +106,9 @@ mentioned above or with the ML algorithm. The original dataset is then modified 
 down the tree to the next operator or if there are several copies of the dataset, they can be 
 merged into a single set using a combination operator.
 
+![image](https://github.com/lipika-tech/Blood_Donation/assets/76075950/6628f525-3b7d-4131-8332-f0676da0b41e)
+
+
 TPOT designs a generic algorithm for searching a wide range of supervised classification 
 algorithms that adopt the Python Scitkit learning library, including preprocessors, transformers, 
 feature selection techniques, estimators, and their hyperparameters, without any domain 
