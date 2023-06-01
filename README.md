@@ -31,6 +31,38 @@ donating blood. According to their website:
  Sickle cell disease affects more than 70,000 people in the U.S. About 1,000 babies are 
 born with the disease each year. Sickle cell patients can require frequent blood 
 transfusions throughout their lives.
+Amazingly, only around 5% of the eligible donor population actually donate (Linden, Gregorio 
+et al. 1988, Katsaliaki 2008). This low percentage highlights the risk humans are faced with 
+today as blood and blood products are forecasted to increase year-on-year. This is likely why 
+so many researchers continue to try to understand the social and behavioral drivers for why 
+people donate to begin with. The primary way to satisfy demand is to have regularly 
+occurring donations from healthy volunteers.
+
+# Understanding the Data set
+The data file blood_donation.csv contains the information used to create the 
+model. It consists of 748 rows and five columns. The columns represent the 
+variables, and the rows represent the instances.
+The number of input variables, or attributes for each sample, is 5. All input 
+variables are numeric -valued and represent features from blood donors. 
+The target variable is donation, being 0 no blood donation and 1 blood donation 
+for the last campaign. The following list summarizes the variables information:
+The next list describes the variables information:
+ Recency: Months since the last donation.
+ Frequency: Total number of donations.
+ Monetary: Total blood donated.
+ Time: Months since the first donation.
+ Whether he/she donated blood in March 2007 : True if the person donated 
+in the last campaign, false otherwise.
+Finally, the use of all instances is selected. Each patient has an instance that 
+contains the input and target variables.
+We'll now use train_test_split() method to split transfusion DataFrame.
+Target incidence informed us that in our dataset 0s appear 76% of the time. We want to keep 
+the same structure in train and test datasets, i.e., both datasets must have 0 target incidence of 
+76%. This is very easy to do using the train_test_split() method from the scikit learn library -
+all we need to do is specify the stratify parameter. In our case, we'll stratify on 
+the target column.
+
+
  More than 1.6 million people were diagnosed with cancer last year. Many of them will 
 need blood, sometimes daily, during their chemotherapy treatment.
  A single car accident victim can require as many as 100 pints of blood
