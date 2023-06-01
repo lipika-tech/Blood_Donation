@@ -121,6 +121,11 @@ TPOT is a Python Automated Machine Learning tool that optimizes machine learning
 using genetic programming.
 
 
+use case diagram
+![image](https://github.com/lipika-tech/Blood_Donation/assets/76075950/9a1109fb-062f-4586-b708-d0a8029e4dd9)
+
+
+
 TPOT will automatically explore hundreds of possible pipelines to find the best one for our dataset. Note, the 
 outcome of this search will be a scikit-learn pipeline, meaning it will include any pre-processing steps as well 
 as the model.
