@@ -196,7 +196,20 @@ algorithms are capable of analyzing the profile of each donor and find the best
 fit ones with respect to health condition and lifestyle. Moreover, It is also 
 capable of showing the exact number of the donors in the map who are willing 
 to donate blood. This will make the easiest and fastest way to get a best match 
-blood donor
+blood donor.
+
+
+# FUTURE SCOPE:
+The work outputs the power to save lives in the palm of your hand. Donating blood and platelets 
+is easier than ever. Find nearby Red Cross blood drives, schedule appointments, earn rewards 
+from premier retailers, and follow your blood’s journey from donation through delivery (when 
+possible), and create or join a lifesaving team and track its impact on a national leader board. 
+The future plan is this: 
+1. Send Push Notification to the persons who are selected and then if the person accept the 
+request another notification will be sent to the sender and connection will be established.
+2. There will be a request and accept button for sending and receiving push notification.
+3. All the nearby Hospitals will be shown in the app 
+4.The whole blood donation profile will be saved in the database.
 
 
 
