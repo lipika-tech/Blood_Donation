@@ -79,5 +79,97 @@ at -25 degrees Celsius. Moreover, platelets can often be stored for at most 5 da
 cells up to 42 days, and plasma up to a calendar year.
 
 
+# METHODOLOGY
+The biomedical signal analysis of Blood and PPH requires several steps, including data preprocessing to prepare the data, selecting appropriate features using feature extraction and 
+engineering, model selection and validation, and tuning of hyperparameters. All these steps 
+aim to effectively produce an accurate machine learning model to estimate Blood from PPH. 
+To achieve this goal, a tree-based pipeline optimization tool (TPOT) is used in this paper to 
+estimate the blood loss from PPH. To simplify, TPOT uses genetic programming from the 
+Python package DEAP to pick a series of pre-processing data functions and ML classification 
+or regression algorithms to optimize the model’s performance for a dataset of interest. In 
+addition to the ML algorithm, the TPOT model pipeline, as presented in the example illustrated 
+in Fig, includes a variety of data transformers implemented in the Scikit-learn Python library, 
+such as various pre-processors (Min-Max Scaler, Standard Scaler, Max Abs Scaler, 
+Normalizer, polynomial features expansion) and feature selectors (Select Percentile, Variance 
+Threshold, recursive feature elimination). In some instances, designing a new feature set may 
+help extract valuable information (e.g., when a selected method analyses one feature 
+simultaneously while complex feature interactions are present in the dataset). TPOT also 
+provides several custom function constructor implementations: Zero counts (count of zero/nonzeros per sample), stacking estimator (SE) (generates predictions and class probabilities with a 
+classifier of choice as new features), one hot encoder (converts categorical features to binary 
+features), and a range of sklearn transformer implementations: PCA, independent component 
+analysis, and a selection of sklearn transformer implementations (Nystroem, RBF Sampler). 
+The complete TPOT configuration includes 11 classification algorithms, 14 feature 
+transformers, and five feature selectors. TPOT uses a tree-based structure to incorporate all 
+these operators (Fig). Any pipeline begins at the root of the tree structure with one or more 
+copies of the entire dataset and continues with the feature transformation/selection operators 
+mentioned above or with the ML algorithm. The original dataset is then modified and moved 
+down the tree to the next operator or if there are several copies of the dataset, they can be 
+merged into a single set using a combination operator.
+
+TPOT designs a generic algorithm for searching a wide range of supervised classification 
+algorithms that adopt the Python Scitkit learning library, including preprocessors, transformers, 
+feature selection techniques, estimators, and their hyperparameters, without any domain 
+knowledge or human data inputs. As demonstrated in the correlation matrix heatmap for the 
+dataset of this study, the stronger correlation on both ends of the spectrum presented in a darker 
+color and weaker correlation has been presented in a lighter shade color. Thus, the feature 
+extraction pipeline must precisely map the PPG diastolic peak to the foot (signal minimum) of 
+the BP signal. In the following sub-sections, the details of TPOT phases will be elaborated.
+TPOT is a Python Automated Machine Learning tool that optimizes machine learning pipelines 
+using genetic programming.
+
+
+TPOT will automatically explore hundreds of possible pipelines to find the best one for our dataset. Note, the 
+outcome of this search will be a scikit-learn pipeline, meaning it will include any pre-processing steps as well 
+as the model.
+We are using TPOT to help us zero in on one model that we can then explore and optimize further
+
+# Language and Platform Used
+2.2.1 Language: Python
+Python is a high-level, general-purpose programming language. Its design 
+philosophy emphasizes code readability with the use of significant indentation via 
+the off-side rule. Python is dynamically typed and garbage-collected.
+It can be used to 
+ AI and machine learning
+ Data analytics 
+ Data Visualization
+ Programming applications
+
+2.2.2 IDE: JupyterLab
+JupyterLab is the latest web-based interactive development environment for 
+notebooks, code, and data. Its flexible interface allows users to configure and 
+arrange workflows in data science, scientific computing, computational journalism, 
+and machine learning. A modular design invites extensions to expand and enrich 
+functionality.
+ Easy to convert: Jupyter Notebook allows users to convert the notebooks 
+into other formats such as HTML and PDF.
+ It also uses online tools and nbviewer which allows you to render a publicly 
+available notebook in the browser directly.
+ Live code 
+ Equations 
+ Computational output
+ Visualizations
+ Multimedia resources
+ Explanatory text.
+
+# IMPLEMENTATION
+3.1 Gathering Requirements and Defining Problem Statement
+This is the first step wherein the requirements are collected from the clients to understand the
+deliverables and goals to be achieved after which a problem statement is defined which has to be 
+adhered to while development of the project.
+3.2 Data Collection and Importing
+Data collection is a systematic approach for gathering and measuring information from a variety 
+of sources in order to obtain a complete and accurate picture of an interest area. It helps an 
+individual or organization to address specific questions, determine outcomes and forecast future
+probabilities and patterns.
+Our dataset is from a mobile blood donation vehicle in Taiwan. The Blood Transfusion Service Center drives 
+to different universities and collects blood as part of a blood drive. We want to predict whether or not a donor 
+will give blood the next time the vehicle comes to campus.
+The data is stored in datasets/transfusion.data and it is structured according to RFMTC marketing 
+model (a variation of RFM).
+
+Jupyter notebook attached
+
+
+
 
 
